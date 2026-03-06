@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TO DO List</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="login-page">
+
+    <main>
+        <!-- Login div -->
+        <div class="login-div" id="login-div">
+            <div class="login-container">
+                <!-- <div class="appinfo">
+                    <h2>To-Do List</h2>
+                    <p>features</p>
+                </div> -->
+
+                <div class="logsignContainer">
+                    <p>Please enter your details</p>
+                    <h2>Welcome Back</h2>
+                    <form id="login-form">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <div>
+                            <button type="button" id="loginBtn" class="button">Login</button>
+                            <p>Don't have an account? <a id="logSignBtn" href="#signup-div">Sign Up</a></p>
+                            <div><p id="logMessage"></p></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signup div -->
+        <div class="signup-div" style="display: none;" id="signup-div">
+            <div class="signup-container">
+                <div class="logsignContainer">
+                    <h2>Join Us</h2>
+                    <form id="signup-form">
+                        <label for="new-username">Username:</label>
+                        <input type="text" id="new-username" name="new-username" required>
+                        
+                        <label for="new-password">Password:</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                    
+                        <label for="new-email">Email:</label>
+                        <input type="email" id="new-email" name="new-email" required>
+                        
+                        <div>
+                            <button type="button" id="signupBtn" class="button">Sign Up</button>
+                            <button type="button" id="cancelBtn">Cancel</button>
+                            <div><p id="signMessage"></p></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

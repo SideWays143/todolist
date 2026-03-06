@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TO_DO List</title>
+    <meta charset="UTF-8">
+    <script>
+        if(!localStorage.getItem("token")){
+            window.location.replace("index.html");
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <div class="navcontent">
+        <header class="navbar">
+            <a href="todo.html">
+                <img src="images/to-do-list.png" alt="To-Do List Logo" class="logo">
+            </a>
+            <p class="displayName" id="displayName"></p>
+            <button type="button" id="logoutBtn">Logout</button>
+        </header>
+    </div>
+
+    <main>
+        <div class="mainContent">
+            <h2>To-Do List</h2>
+
+            <!-- Add Tasks Div -->
+            <div class="add-todo">
+                <input type="text" id="todoInput" placeholder="Add a task...">
+                <select name="priority" id="priority" class="priority">
+                    <option value="select">Select</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <button id="addBtn">Add</button>
+                <div><p id="addMessage"></p></div>
+            </div>
+
+            <!-- Pending Tasks Div -->
+
+            <div class="pending">
+                <h3>Pending Tasks:</h3>
+                <ul class="pendingUL" id="pendingUL">
+                </ul>
+            </div>
+
+            <!-- Completed Tasks Div -->
+             <div class="completed">
+                <h3>Completed Tasks:</h3>
+                <ul class="pendingUL" id="completedUL">
+                </ul>
+            </div>
+
+        </div>
+
+    </main>
+</body>
+</html>
