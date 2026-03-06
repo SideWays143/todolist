@@ -419,7 +419,6 @@ let logOut = () => {
 	});
 
 	$(document).on("click", ".deleteBtn", function () {
-
     	deleteTask.call(this);
 	});
 
