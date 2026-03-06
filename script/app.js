@@ -5,7 +5,6 @@ $(document).ready(function () {
 //My End Point 
 const endpoint = "https://wqphpflgyl.execute-api.us-east-1.amazonaws.com/default/todo-list";
 
-
 //Functions
 
 let clearLoginMessage = () => {
@@ -402,16 +401,17 @@ let logOut = () => {
 		logOut();
 	})
 
+	$("#todologo").click(function (e) {
+		e.preventDefault();
+		getTask();
+	});
+
 	if (window.location.pathname.includes("todo.html")) {
     	getTask();
 	}
 
 	$("#addBtn").click (() => {
 		addtask();
-	})
-
-	$("#todologo").click(() =>{
-		getTask();
 	})
 
 	$(document).on("click", ".completeBtn", function () {
